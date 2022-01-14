@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "./node_modules/stylelint-config-standard-scss"
-  ],
-  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-standard-scss"],
   "rules": {
     "selector-class-pattern": "^(((is|has|not){1}-[a-z]+)|([A-Z]{1}[a-z]+)+\\-{0,2}([a-z]+[A-Z]?[a-z]*){0,2}?((\\-[a-z]+[A-Z]?[a-z]*)?(\\-{2})([a-z]+[A-Z]?[a-z]*)*)?)$",
     "alpha-value-notation": "number",
