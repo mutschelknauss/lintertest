@@ -35,10 +35,9 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: docker://github/super-linter:v4
+        uses: github/super-linter:v4
         env:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_CSS: true
-          VALIDATE_JAVASCRIPT_ES: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
