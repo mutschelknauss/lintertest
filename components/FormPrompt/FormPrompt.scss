@@ -1,22 +1,3 @@
-.FormPrompt {
-  position: absolute;
-  z-index: 13;
-  top: 250px;
-  left: 50%;
-  width: calc(100% - 40px);
-  max-width: 500px;
-  padding: 25px;
-  transform: translate(-50%, -50%);
-  line-height: unitless-calc(30, 25);
-  border: 1px solid $blue-periwinkle;
-  background: $white;
-  box-shadow: 0 2px 1px -1px rgba($gainsboro, .15);
-
-  @include breakpoint(medium) {
-    width: 100%;
-  }
-}
-
 .FormPrompt-heading {
   max-width: 270px;
   margin: 10px 0 0;
@@ -77,6 +58,25 @@
     padding-right: 16px;
     font-size: rem-calc(17);
     line-height: unitless-calc(20, 14);
+  }
+}
+
+.FormPrompt {
+  position: absolute;
+  z-index: 13;
+  top: 250px;
+  left: 50%;
+  width: calc(100% - 40px);
+  max-width: 500px;
+  padding: 25px;
+  transform: translate(-50%, -50%);
+  line-height: unitless-calc(30, 25);
+  border: 1px solid $blue-periwinkle;
+  background: $white;
+  box-shadow: 0 2px 1px -1px rgba($gainsboro, .15);
+
+  @include breakpoint(medium) {
+    width: 100%;
   }
 }
 
