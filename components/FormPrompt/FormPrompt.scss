@@ -29,16 +29,6 @@
   }
 }
 
-.FormPrompt-body {
-  margin-bottom: 16px;
-
-  & > p {
-    padding-right: 16px;
-    font-size: rem-calc(17);
-    line-height: unitless-calc(20, 14);
-  }
-}
-
 .FormPrompt-promptOverlay {
   position: absolute;
   z-index: 13;
@@ -58,6 +48,16 @@
   @include breakpoint(small) {
     width: 100%;
     height: 100%;
+  }
+}
+
+.FormPrompt-body {
+  margin-bottom: 16px;
+
+  & > p {
+    padding-right: 16px;
+    font-size: rem-calc(17);
+    line-height: unitless-calc(20, 14);
   }
 }
 
