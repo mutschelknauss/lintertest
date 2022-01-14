@@ -1,9 +1,4 @@
-name: Rinus Linter
-
-#
-# Documentation:
-# https://help.github.com/en/articles/workflow-syntax-for-github-actions
-#
+name: PR Linter
 
 #############################
 # Start the job on all push #
@@ -36,12 +31,14 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      ##########################
-      # Try out differnet linter #
-      ##########################
-
-      - name: stylelinter
-        uses: actions-hub/stylelint@v1.1.3
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: docker://github/super-linter:v4
         env:
-          CONFIG_PATH: ./.stylelintrc.json
-          PATTERN: "**/*.scss"
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_CSS: true
+          VALIDATE_JAVASCRIPT_ES: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
