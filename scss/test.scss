@@ -1,10 +1,11 @@
-.FormPrompt-block {
-  display: block;
-}
-
-.FormPrompt-buttonGroup {
+.FormPrompt--buttonGroup---test-test {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.FormPrompt-block {
+  display: block;
+  border: 1px solid #000;
 }
